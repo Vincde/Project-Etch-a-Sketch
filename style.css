@@ -1,13 +1,19 @@
-.sixteen-div{
-    border: 5px solid black;
-    margin:5px;
-    height:200px;
-    width: 200px;
+*{
+    border:2px solid red;
+    margin:2px;
 }
 
 .big-container{
     display:flex;
     flex-wrap:wrap;
-    border: 2px solid black;
-    width: 1000px;
+    
+    
+
+}
+
+.squares-dimensions{
+    width:10px;
+    height:10px;
+
+
 }

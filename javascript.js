@@ -1,30 +1,26 @@
-const container = document.querySelector('.big-container');
-let loopVariable;
 
 
-for(let i = 0; i < 16; i++){
-    loopVariable = document.createElement('div');
-    loopVariable.className = 'sixteen-div';
-    container.appendChild(loopVariable);
+function startHere(){                                                                         /* name of the function is to be changed . */
+                                 // this function only works to start the code itself, it's not really the result
+
+createContainer();   //function to create containers
+
 }
 
-const allDivs = document.querySelector('.sixteen-div');
-const changeColor = document.createElement('div');
-changeColor.style.width = 0 + 'px';
-changeColor.style.height = 0 + 'px';            /* this width and height are only the dimensions of the div, not its position in the page */
-                                                // see for position:absolute, maybe u need it
-changeColor.style.border = '5px solid red';    /* red div is visible */
-container.appendChild(changeColor);
 
+function createContainer(){
+    /*  let rows; */                 
+                            //  useless?
+    const container = document.querySelector('.big-container'); 
+    let column;
+    for(let i = 0;i < 16; i++){
+        for(let j = 0; j < 16; j++){
+            column = document.createElement('div');
+            column.className = 'squares-dimensions';
+            container.appendChild(column);
+        }
+    }
+}
+//this code creates all divs without function call. as the function is added to the code they disappear
 
-
-
-allDivs.addEventListener('mouseover',(event) => {                   /* this event is not read by the website. */
-    let x,y;
-    x = event.clientX;
-    y = event.clientY;
-    changeColor.style.width = x + 'px';
-    changeColor.style.height = y + 'px';
-    changeColor.style.backgroundColor= 'red';
-    
-});
+createContainer();
