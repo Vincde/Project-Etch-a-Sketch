@@ -18,6 +18,8 @@ createPixel(16);
 
 
 
+
+
 function addRgb(e){
     e.target.style = `background-color: rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
 
