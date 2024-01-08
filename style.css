@@ -1,0 +1,23 @@
+/* html,body{
+    height: 100%;
+    width: 100%;
+} */
+
+
+.big-container{
+    border:2px solid red;
+    width: 500px;
+    height: 500px;
+    margin: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.pixel-div{
+    outline:1px solid black;
+    outline-style: solid;
+    outline-width: 2px;
+    margin: 0px;
+    padding:0px;
+}
