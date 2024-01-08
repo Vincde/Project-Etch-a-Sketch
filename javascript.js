@@ -21,5 +21,5 @@ createPixel(16);
 
 
 function addRgb(e){
-    e.style.backgroundColor = 'black';
+    e.target.style.backgroundColor = 'black';
 }
