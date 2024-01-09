@@ -42,5 +42,25 @@ getSize();
 
 
 function addRgb(e){
-    e.target.style.backgroundColor = 'black';
+    let red,green,blue;
+    let redDivide,blueDivide,greenDivide;
+
+    red = Math.floor(Math.random() * 255);
+    green = Math.floor(Math.random() * 255);
+    blue = Math.floor(Math.random() * 255); 
+    e.target.style.backgroundColor = `rgb(${red},${blue},${green})`;
+    
+    
+    //under here are the things that should go into another function
+    
+    /* redDivide = red / 10;
+    greenDivide = green / 10;
+    blueDivide = blue / 10;
+
+
+    red = red - redDivide;
+    green = green - greenDivide;
+    blue = blue - blueDivide;
+    e.target.style.backgroundColor = `rgb(${red},${blue},${green})`; */
 }
+
