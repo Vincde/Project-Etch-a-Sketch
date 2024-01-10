@@ -8,11 +8,13 @@ function createPixel(size){
     const bigContainer = document.querySelector('.big-container');
     let number = (500/(size));
     for(i = 0;i < size * size; i++){
+
         const pixel = document.createElement('div');
         pixel.classList.add('pixel-div');
         pixel.style.width = `${number}px`;
         pixel.style.height = `${number}px`;
-        pixel.addEventListener('pointerover',addRgb);
+        pixel.addEventListener('pointerover',addRgb,{once : true});         //i'm executing it once because i need the function not to repeat the random numbers
+        
             
         bigContainer.appendChild(pixel);
     }
@@ -44,23 +46,30 @@ getSize();
 function addRgb(e){
     let red,green,blue;
     let redDivide,blueDivide,greenDivide;
-
+    
+        
     red = Math.floor(Math.random() * 255);
     green = Math.floor(Math.random() * 255);
     blue = Math.floor(Math.random() * 255); 
-    e.target.style.backgroundColor = `rgb(${red},${blue},${green})`;
+    e.target.style.backgroundColor = `rgb(${red},${blue},${green})`;    //this gets executed 1 time, so the variables are 1 for pixel
     
-    
-    //under here are the things that should go into another function
-    
-    /* redDivide = red / 10;
+    redDivide = red / 10;
     greenDivide = green / 10;
     blueDivide = blue / 10;
-
-
-    red = red - redDivide;
-    green = green - greenDivide;
-    blue = blue - blueDivide;
-    e.target.style.backgroundColor = `rgb(${red},${blue},${green})`; */
+    
+    e.target.addEventListener('pointerover',()=>{                            //then i add an eventListener that executes perfectly every time until it gets to dark
+        red = red - redDivide;
+        green = green - greenDivide;
+        blue = blue - blueDivide;
+        e.target.style.backgroundColor = `rgb(${red},${blue},${green})`;
+    });
+    
+    /* tryThis(e); */        //this function is a try. it demonstrates that the event is linkable through various functions
+    //under here are the things that should go into another function
+    
+    
 }
-
+                                                                                  //   ^
+/* function tryThis(e){                                // function linked to the above |
+    e.target.style.backgroundColor = `rgb(0,0,0)`;                                //   |
+} */
