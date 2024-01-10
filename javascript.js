@@ -37,8 +37,12 @@ function getSize(){
         e.preventDefault();
         createPixel(num);
     });
+
+    /* const resetButton = document.querySelector('.reset');
+    resetButton.addEventListener('click',resetGrid); */
     
 }
+
 
 getSize();
 
@@ -72,4 +76,9 @@ function addRgb(e){
                                                                                   //   ^
 /* function tryThis(e){                                // function linked to the above |
     e.target.style.backgroundColor = `rgb(0,0,0)`;                                //   |
+} */
+
+/* function resetGrid(){
+    const resetSinglePixel = document.querySelectorAll('.pixel');
+    resetSinglePixel.forEach(pixel => pixel.parentElement.removeChild(pixel));
 } */
