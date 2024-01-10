@@ -38,8 +38,8 @@ function getSize(){
         createPixel(num);
     });
 
-    /* const resetButton = document.querySelector('.reset');
-    resetButton.addEventListener('click',resetGrid); */
+    const resetButton = document.querySelector('.reset');
+    resetButton.addEventListener('click',resetGrid);
     
 }
 
@@ -61,11 +61,13 @@ function addRgb(e){
     greenDivide = green / 10;
     blueDivide = blue / 10;
     
-    e.target.addEventListener('pointerover',()=>{                            //then i add an eventListener that executes perfectly every time until it gets to dark
+    e.target.addEventListener('pointerover',()=>{      //then i add an eventListener that executes perfectly every time until it gets to dark
+        if(red>=0){
         red = red - redDivide;
         green = green - greenDivide;
         blue = blue - blueDivide;
         e.target.style.backgroundColor = `rgb(${red},${blue},${green})`;
+        }
     });
     
     /* tryThis(e); */        //this function is a try. it demonstrates that the event is linkable through various functions
@@ -78,7 +80,7 @@ function addRgb(e){
     e.target.style.backgroundColor = `rgb(0,0,0)`;                                //   |
 } */
 
-/* function resetGrid(){
-    const resetSinglePixel = document.querySelectorAll('.pixel');
+function resetGrid(){
+    const resetSinglePixel = document.querySelectorAll('.pixel-div');
     resetSinglePixel.forEach(pixel => pixel.parentElement.removeChild(pixel));
-} */
+}
