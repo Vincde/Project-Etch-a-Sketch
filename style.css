@@ -5,13 +5,13 @@
 
 
 .big-container{
-    border:2px solid red;
     width: 500px;
     height: 500px;
     margin: auto auto;
     display: flex;
     flex-wrap: wrap;
-    
+    background-color: white;
+    border-radius: 20px;
 }
 
 .pixel-div{
@@ -19,4 +19,32 @@
     outline-width: 1px;
     margin: 0px;
     padding:0px;
+}
+
+body{
+    background-color: #e1ffbb;
+}
+
+button{
+    background: none;
+    box-shadow: none;
+    border-radius: 20px;
+    margin-right:0.5rem;
+}
+
+form{
+    margin-left: 1rem;
+}
+
+.length-text{
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color:#009990;
+}
+
+#input-size{
+    border:0;
+    border-radius: 100px;
+    margin-right: 0.5rem;
 }
